@@ -13,7 +13,7 @@ module.exports = {
     hints: false,
   },
   plugins: [
-    new Dotenv()
+    new Dotenv(),
   ],
   module: {
     rules:

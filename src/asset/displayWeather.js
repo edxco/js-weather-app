@@ -1,16 +1,16 @@
 import capitalize from './capitalize';
 import imgShow from './imgShow';
 
-const displayWeather = (result, unit) => {
+const displayWeather = (result) => {
   const cardDiv1 = document.getElementById('card');
 
   const cardDiv = document.createElement('div');
-  cardDiv.className = 'mx-auto w-2/4 rounded shadow mt-10 bg-gradient-to-tr from-blue-500 to-blue-700';
+  cardDiv.className = 'mx-auto w-2/4 rounded shadow mt-10 bg-gradient-to-tr from-blue-500 to-blue-700 opacity-80';
   const selectionDiv = document.createElement('div');
   selectionDiv.className = 'w-full bg-white text-center p-1 rounded-t font-bold text-gray-500';
   selectionDiv.textContent = 'Your current location';
   const wrapper = document.createElement('div');
-  wrapper.className = 'flex p-5'
+  wrapper.className = 'flex p-5';
 
   const divM1 = document.createElement('div');
   divM1.className = 'w-full text-center';
@@ -22,7 +22,7 @@ const displayWeather = (result, unit) => {
   degreeDiv.textContent = `${result.main.temp - 273.15}°`;
   const divM2 = document.createElement('div');
   divM2.className = 'w-full';
-  const img = document.createElement('img')
+  const img = document.createElement('img');
   img.className = 'mx-auto h-16';
   img.src = imgShow(result.weather[0].description);
   const statusDiv = document.createElement('div');
@@ -35,7 +35,7 @@ const displayWeather = (result, unit) => {
   divM1.append(nameDiv, degreeDiv);
   divM2.append(img, statusDiv);
 
-  return cardDiv1;
-}
+  return cardDiv;
+};
 
 export default displayWeather;

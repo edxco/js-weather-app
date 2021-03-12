@@ -11,6 +11,5 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #fff !important;
 }
 
-
 /* stylelint-disable */
 @tailwind utilities;
