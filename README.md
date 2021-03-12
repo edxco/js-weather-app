@@ -23,7 +23,7 @@
 - [Open Weather Map](https://openweathermap.org) 
 
 ## Live Demo
-[Live Demo](https://edxco.github.io/js-wheater-app/.)
+[Live Demo](http://edxco.com/weatherApp/)
 
 ## Getting Started
 
