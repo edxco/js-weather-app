@@ -2,6 +2,7 @@ import capitalize from './capitalize';
 import imgShow from './imgShow';
 
 const displayWeather = (result) => {
+  const dC = result.main.temp - 273.15;
   const cardDiv1 = document.getElementById('card');
 
   const cardDiv = document.createElement('div');
@@ -17,9 +18,16 @@ const displayWeather = (result) => {
   const nameDiv = document.createElement('div');
   nameDiv.className = 'font-light text-white text-2xl mb-3';
   nameDiv.textContent = `${result.name}`;
-  const degreeDiv = document.createElement('div');
-  degreeDiv.className = 'font-bold text-bold text-4xl text-yellow-400';
-  degreeDiv.textContent = `${result.main.temp - 273.15}°`;
+
+  const degreeCeDiv = document.createElement('div');
+  degreeCeDiv.className = 'font-bold text-bold text-4xl text-yellow-400 block';
+  degreeCeDiv.id = 'currentTempCe';
+  degreeCeDiv.textContent = `${Math.round(dC)} °C`;
+  const degreeFeDiv = document.createElement('div');
+  degreeFeDiv.className = 'font-bold text-bold text-4xl text-yellow-400 hidden';
+  degreeFeDiv.id = 'currentTempFe';
+  degreeFeDiv.textContent = `${Math.round(dC * 1.8 + 32)} °F`;
+
   const divM2 = document.createElement('div');
   divM2.className = 'w-full';
   const img = document.createElement('img');
@@ -32,7 +40,7 @@ const displayWeather = (result) => {
   cardDiv1.append(cardDiv);
   cardDiv.append(selectionDiv, wrapper);
   wrapper.append(divM1, divM2);
-  divM1.append(nameDiv, degreeDiv);
+  divM1.append(nameDiv, degreeCeDiv, degreeFeDiv);
   divM2.append(img, statusDiv);
 
   return cardDiv;

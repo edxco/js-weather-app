@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kingobaino1/TodoList.git"
+    "url": "git+https://github.com/edxco/js-wheater-app.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kingobaino1/TodoList/issues"
+    "url": "https://github.com/edxco/js-wheater-app/issues"
   },
-  "homepage": "https://github.com/Kingobaino1/TodoList#readme",
+  "homepage": "https://github.com/edxco/js-wheater-app/README.md",
   "devDependencies": {
     "autoprefixer": "^10.2.4",
     "babel-eslint": "^10.1.0",
