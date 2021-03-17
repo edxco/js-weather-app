@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/style.css" type="text/css">
+  <title>Wheater Check</title>
+</head>
+
+<body class="bg-gradient-to-b from-blue-300 to-blue-100">
+
+  <section class="text-gray-600 body-font relative h-screen">
+    <div class="absolute inset-0 bg-gray-300" id="map">
+    </div>
+    <div class="container px-5 pt-5 mx-auto flex">
+      <div class="relative z-50 w-full">
+        <section class="text-gray-400 body-font bg-gray-900 py-10 rounded">
+          <div class="container flex flex-col md:flex-row w-full text-center mx-auto items-center px-5">
+            <div class="w-full flex items-center justify-center">
+              <div class="text-center">
+                <img src="../src/img/logo.png" class="h-8 mr-5">
+              </div>
+              <div class="text-white font-mono text-lg text-left hidden md:block">
+                Edxco Wheater station
+              </div>
+            </div>
+            <div class="py-3 w-full flex  flex-col">
+              <div>
+                <input type="text" id="city" class="border-b bg-transparent focus:ring-transparent focus:outline-none">
+                <button id="search"
+                  class="rounded-full w-8 h-8 bg-yellow-300 hover:bg-white p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4" viewBox="0 0 24 24">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="text-sm text-red-500 hidden" id="error">
+                
+              </div>
+            </div>
+            <div class="w-full md:text-right flex justify-center cursor-pointer text-yellow-100 hover:text-yellow-200">
+              <label class="toggle-switchy" for="example" data-size="sm" data-style="rounded" id="btnSwtich">
+                <input checked type="checkbox" id="example">
+                <span class="toggle">
+                  <span class="switch"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section id="card">
+
+        </section>
+
+        <section id="card2">
+
+        </section>
+
+      </div>
+    </div>
+
+
+
+
+    <script src="bundle.js"></script>
+
+</body>
+
+</html>
